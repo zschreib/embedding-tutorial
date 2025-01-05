@@ -1,0 +1,5 @@
+torch
+numpy
+umap-learn
+cudatoolkit==11.3.1
+fair-esm
