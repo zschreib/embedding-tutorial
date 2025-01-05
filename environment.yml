@@ -1,0 +1,12 @@
+name: esm-umap
+channels:
+  - pytorch
+  - conda-forge
+dependencies:
+  - python=3.8
+  - pytorch
+  - cudatoolkit=11.3.1
+  - numpy
+  - umap-learn
+  - fair-esm
+  - pip
