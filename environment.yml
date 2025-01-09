@@ -174,3 +174,4 @@ dependencies:
       - xyzservices==2024.9.0
       - yellowbrick==1.5
       - zipp==3.19.2
+      - fair-esm

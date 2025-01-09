@@ -2,12 +2,9 @@ import os
 import sys
 import torch
 import numpy as np
-import pandas as pd
 import matplotlib.pyplot as plt
-import seaborn as sns
 import umap
 import umap.plot
-import hdbscan
 
 def load_embedding(file_path):
     try:
@@ -20,13 +17,6 @@ def load_embedding(file_path):
     except Exception as e:
         print(f"Error processing file {file_path}: {e}")
         return None, None
-
-def load_metadata(metadata_file):
-    try:
-        return pd.read_csv(metadata_file, sep='\t')
-    except Exception as e:
-        print(f"Error loading metadata file: {e}")
-        return None
 
 def load_all_embeddings(root_dir):
     embeddings = []
@@ -59,7 +49,7 @@ def plot_umap(embeddings, embedding_ids, output_file):
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print("Usage: python script_name.py <input_directory> <output_plot_file>")
+        print("Usage: python umap_visualize.py <input_directory> <output_plot_file>")
         sys.exit(1)
 
     input_dir, output_path = sys.argv[1:]
